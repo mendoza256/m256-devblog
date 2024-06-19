@@ -1,6 +1,7 @@
-<h2>{{ article.title | uppercase }}</h2>
-<p>{{ article.description }}</p>
-<p>{{ article.url }}</p>
-<p>{{ article.urlToImage }}</p>
-<p>{{ article.content }}</p>
-<p>{{ article.source.name }}</p>
+<article *ngIf="article">
+  <h2>{{ article.title | uppercase }}</h2>
+  <p>{{ article.description }}</p>
+  <p>{{ article.url }}</p>
+  <p>{{ article.urlToImage }}</p>
+  <p>{{ article.content }}</p>
+</article>

@@ -2,8 +2,6 @@ import { Component } from '@angular/core';
 import { Article } from '../article';
 import { CommonModule, NgFor } from '@angular/common';
 import { RouterModule, ActivatedRoute } from '@angular/router';
-import { Observable } from 'rxjs';
-import { switchMap } from 'rxjs/operators';
 
 @Component({
   selector: 'app-articles',
@@ -13,8 +11,7 @@ import { switchMap } from 'rxjs/operators';
   styleUrl: './articles.component.scss',
 })
 export class ArticlesComponent {
-  constructor(private route: ActivatedRoute) {}
-
+  article?: Article;
   articles: Article[] = [
     {
       publishedAt: '2023-10-11T00:00:00Z',

@@ -1,6 +1,7 @@
-<!-- loop throught the articles in the array -->
 <div *ngFor="let article of articles">
-  <a [routerLink]="['/article', article.source.id]">
-    <h3>{{ article.title }}</h3>
-  </a>
+  <!-- link to /article with the query param id and the article id -->
+
+  <a [routerLink]="['/article']" [queryParams]="{ id: article.source.id }">{{
+    article.title
+  }}</a>
 </div>
